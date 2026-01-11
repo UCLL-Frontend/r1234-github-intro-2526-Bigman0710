@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weird Food Challenges - Stats</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Challenge Stats & Overview</h1>
+    <nav><a href="index.html">← Back to Add Challenges</a></nav>
+
+    <!-- Filters -->
+    <select id="painFilter">
+      <option value="">All Pain Levels</option>
+      <option value="5">Pain 5 or higher</option>
+      <option value="7">Pain 7 or higher</option>
+      <option value="9">Pain 9 or higher</option>
+    </select>
+
+    <select id="friendsFilter">
+      <option value="">With or without friends</option>
+      <option value="yes">Only with friends</option>
+      <option value="no">Only alone</option>
+    </select>
+
+    <input
+      type="number"
+      id="minCostFilter"
+      placeholder="Min. cost"
+      step="0.01"
+      min="0"
+    />
+
+    <!-- Sorting -->
+    <select id="sortDate">
+      <option value="">No date sorting</option>
+      <option value="asc">Date: Oldest → Newest</option>
+      <option value="desc">Date: Newest → Oldest</option>
+    </select>
+
+    <select id="sortCost">
+      <option value="">No cost sorting</option>
+      <option value="asc">Cost: Cheapest → Most expensive</option>
+      <option value="desc">Cost: Most expensive → Cheapest</option>
+    </select>
+
+    <div id="stats-summary" style="margin: 20px 0; font-weight: bold"></div>
+    <p style="color: #666; font-size: 0.9em; margin-top: 30px">
+      You can also edit or delete challenges directly here.
+    </p>
+    <ul id="challengeList"></ul>
+
+    <script type="module" src="stats.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

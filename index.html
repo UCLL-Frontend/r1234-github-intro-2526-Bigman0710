@@ -3,9 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weird Food Challenges - Add</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Github</h1>
+    <h1>Weird Food Challenges</h1>
+    <nav><a href="stats.html">See Stats</a></nav>
+
+    <form id="challengeForm">
+      <input
+        type="text"
+        id="name"
+        placeholder="Challenge Name (For example: Ghost Pepper Wings)"
+        required
+      />
+      <input type="date" id="date" required />
+      <input
+        type="text"
+        id="location"
+        placeholder="Where? (For example: Home, Burger King)"
+        required
+      />
+
+      <select id="succeeded" required>
+        <option value="">Did you succeed?</option>
+        <option value="yes">Yes</option>
+        <option value="partial">Partial</option>
+        <option value="no">No / Gave up</option>
+      </select>
+
+      <input
+        type="number"
+        id="painLevel"
+        placeholder="Pain level (1-10)"
+        min="1"
+        max="10"
+        required
+      />
+      <input
+        type="number"
+        id="cost"
+        placeholder="How much did it cost?"
+        step="0.01"
+        min="0"
+        required
+      />
+
+      <select id="friends" required>
+        <option value="">Friends involved?</option>
+        <option value="yes">Yes</option>
+        <option value="no">No, alone</option>
+      </select>
+
+      <button type="submit">Add / Update Challenge</button>
+    </form>
+
+    <h2>Your Challenges</h2>
+    <ul id="challengeList"></ul>
+
+    <script type="module" src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
