@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Challenge Stats & Overview</h1>
-    <nav><a href="index.html">← Back to Add Challenges</a></nav>
+    <header>
+      <h1>Challenge Stats &amp; Overview</h1>
+      <nav><a href="index.html">← Back to Add Challenges</a></nav>
+    </header>
 
-    <!-- Filters -->
+    <!-- Filters hier -->
+    <label for="painFilter">Filter op pijnniveau</label>
     <select id="painFilter">
       <option value="">All Pain Levels</option>
       <option value="5">Pain 5 or higher</option>
@@ -18,12 +21,14 @@
       <option value="9">Pain 9 or higher</option>
     </select>
 
+    <label for="friendsFilter">Filter op vrienden</label>
     <select id="friendsFilter">
       <option value="">With or without friends</option>
       <option value="yes">Only with friends</option>
       <option value="no">Only alone</option>
     </select>
 
+    <label for="minCostFilter">Minimale kost</label>
     <input
       type="number"
       id="minCostFilter"
@@ -33,12 +38,14 @@
     />
 
     <!-- Sorting -->
+    <label for="sortDate">Sorteer op datum</label>
     <select id="sortDate">
       <option value="">No date sorting</option>
       <option value="asc">Date: Oldest → Newest</option>
       <option value="desc">Date: Newest → Oldest</option>
     </select>
 
+    <label for="sortCost">Sorteer op prijs</label>
     <select id="sortCost">
       <option value="">No cost sorting</option>
       <option value="asc">Cost: Cheapest → Most expensive</option>
@@ -52,6 +59,5 @@
     <ul id="challengeList"></ul>
 
     <script type="module" src="stats.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
